@@ -173,7 +173,7 @@ class DataSource: NSObject, UITableViewDataSource {
 交互是这样的: 
 ####	TableViewController <-> DataSource <-> UITableView
 
-在这里我们把 tableView 的 dataSource 传给一个辅助类型 DataSource,
+在这里把 tableView 的 dataSource 传给一个辅助类型 DataSource,
 
 DataSource 将 tableView 的原生的构建方法转换成 TableViewController 所需要的方法，
 
@@ -194,9 +194,9 @@ DataSource 将 tableView 的原生的构建方法转换成 TableViewController �
  }
  ```
  
- 这里不难发现我们的 DataSource 只能用于显示 [String]，
+ 这里不难发现 DataSource 只能用于显示 [String]，
  
- 如果我们需要显示 [Int] 或者 [CustomModel] ,
+ 如果需要显示 [Int] 或者 [CustomModel] ,
  
  那么 DataSource 就无法使用了。
  
@@ -208,7 +208,7 @@ DataSource 将 tableView 的原生的构建方法转换成 TableViewController �
 
 **Generic** 是专门用来解决这类问题的，
 
-我们来修改一下 DataSource：
+现在修改一下 DataSource：
 
 *  1
 
@@ -309,7 +309,7 @@ class DataSource<Item>: NSObject, UITableViewDataSource { ... }
  }
 ```
 
-我们如何使用它：
+如何使用它：
 
 ```swift
  class TableViewController: UITableViewController {

@@ -12,6 +12,7 @@
 		4553CE1D1D1CBABE002D23A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4553CE1C1D1CBABE002D23A8 /* Assets.xcassets */; };
 		4553CE201D1CBABE002D23A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4553CE1E1D1CBABE002D23A8 /* LaunchScreen.storyboard */; };
 		4553CE291D1CBB3E002D23A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553CE281D1CBB3E002D23A8 /* TableViewController.swift */; };
+		4553CE371D1CC5C4002D23A8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553CE361D1CC5C4002D23A8 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4553CE1F1D1CBABE002D23A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4553CE211D1CBABE002D23A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4553CE281D1CBB3E002D23A8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4553CE361D1CC5C4002D23A8 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				4553CE191D1CBABE002D23A8 /* Main.storyboard */,
 				4553CE281D1CBB3E002D23A8 /* TableViewController.swift */,
+				4553CE361D1CC5C4002D23A8 /* DataSource.swift */,
 				4553CE271D1CBACE002D23A8 /* Supporting Files */,
 			);
 			path = DataSourceExample;
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4553CE371D1CC5C4002D23A8 /* DataSource.swift in Sources */,
 				4553CE291D1CBB3E002D23A8 /* TableViewController.swift in Sources */,
 				4553CE161D1CBABE002D23A8 /* AppDelegate.swift in Sources */,
 			);

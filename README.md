@@ -89,10 +89,15 @@ class TableViewController: UITableViewController {
  ```
  
  这样写非常简洁，而且非常清晰，
+ 
  只不过它没有遵循 **MVC** 设计模式，
+ 
  因为这里的 texts 是 Model,
+ 
  tableView 是 View，它应该不知道 Model 是什么。
+ 
  所以 tableView 的 texts 属性违反了 **MVC**，
+ 
  会使得程序结构混乱。
  
  另外,要使 tableView 提供以上 API (公共方法)  也并不是一件容易的事情。
@@ -169,7 +174,9 @@ class DataSource: NSObject, UITableViewDataSource {
 ####	TableViewController <-> DataSource <-> UITableView
 
 在这里我们把 tableView 的 dataSource 传给一个辅助类型 DataSource,
+
 DataSource 将 tableView 的原生的构建方法转换成 TableViewController 所需要的方法，
+
 如此实现了 tableView 数据的填充。
  
  
@@ -188,10 +195,15 @@ DataSource 将 tableView 的原生的构建方法转换成 TableViewController �
  ```
  
  这里不难发现我们的 DataSource 只能用于显示 [String]，
+ 
  如果我们需要显示 [Int] 或者 [CustomModel] ,
+ 
  那么 DataSource 就无法使用了。
+ 
+ 
 
 这里我们希望 DataSource 能够支持任意类型的元素，
+
 可以根据使用环境，动态定义元素的类型。
 
 **Generic** 是专门用来解决这类问题的，
@@ -363,6 +375,7 @@ class DataSource<Item>: NSObject, UITableViewDataSource { ... }
  ```
  
 而 Item 是预留的一个类型，
+
 在 TableViewController 中 Item = Int
  
  ```swift
@@ -370,8 +383,13 @@ class DataSource<Item>: NSObject, UITableViewDataSource { ... }
  ```
  
 所以 dataSource.items 是 [Int]，
+
 Swift 是非常聪明的，他知道 dataSource.items 的类型
-同时,他也知道 dataSource.configureCell 的类型是 ((UITableView, **Int**) -> UITableViewCell)!
+
+同时,他也知道 dataSource.configureCell 的类型是：
+
+ ((UITableView, **Int**) -> UITableViewCell)!
+
 传值时如果类型不相符，编译器就会提示错误
 
 这也是 Generic 神奇的地方
@@ -430,12 +448,14 @@ class TableViewController: UITableViewController {
 其他的工作全部由 DataSource 完成
 
 这样流程很简单，实现也很简单，
+
 代码简洁而且可读性高。
 
  结尾
 -------
 
 以上只是演示一下，如何简化 UITableView 的搭建,
+
 事实上还有许多功能可以加上去，比如选中 Item 的回调:
 
 ```swift

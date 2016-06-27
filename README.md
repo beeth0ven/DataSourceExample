@@ -439,7 +439,7 @@ class TableViewController: UITableViewController {
 #### [Item] -> Item -> Cell
 
 
-而 TableViewController 需要做的紧紧只是:
+而 TableViewController 需要做的仅仅只是:
 
 * 填充 Item 的类型
 * 取得数据 [Item]
